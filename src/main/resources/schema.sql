@@ -1,5 +1,4 @@
-CREATE TABLE IF NOT EXISTS employee (
-    id INTEGER PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(50),
-    age INTEGER
+CREATE TABLE IF NOT EXISTS movie(
+  name VARCHAR(50) NOT NULL,
+  year_of_production VARCHAR(4) NOT NULL
 );

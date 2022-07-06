@@ -1,20 +1,23 @@
 package com.example.task09.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.task09.entity.Movie;
+import com.example.task09.mapper.MovieMapper;
+import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
 @Service
-public class MovieService {
-  @Autowired
-  private MovierMapper movierMapper;
+public class MovieServiceImpl implements MovieService {
 
-  public List<Movie> findAll() {
-    return movieMapper.findAll();
+  private final MovieMapper movieMapper;
+
+
+  public MovieServiceImpl(MovieMapper movieMapper) {
+    this.movieMapper = movieMapper;
   }
 
-  public Movie findOne(Long id) {
-    return movieMapper.findOne(id);
+  public List<Movie> findMatch(String yearOfProduction) {
+    return movieMapper.findOne(yearOfProduction);
   }
 }

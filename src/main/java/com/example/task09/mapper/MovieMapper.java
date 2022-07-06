@@ -1,15 +1,15 @@
-package com.example.task09.repositry;
+package com.example.task09.mapper;
 
+import com.example.task09.entity.Movie;
+import java.util.List;
+import java.util.Optional;
 import org.apache.ibatis.annotations.*;
 
+@Mapper
 public interface MovieMapper {
-  @Mapper
-  public interface PlayerMapper {
-    @Select("select * from player")
-    List<Movie> findAll();
-
-    @Select("select * from player where id = #{id}")
-    Movie findOne(Long id);
+    @Select("select * from movie where year_of_production=#{yearOfProduction}")
+    List<Movie> findOne(String yearOfProduction);
 
 
   }
+

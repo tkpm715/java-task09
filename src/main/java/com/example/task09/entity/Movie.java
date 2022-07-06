@@ -1,18 +1,23 @@
-package com.example.task09.model;
+package com.example.task09.entity;
 
 public class Movie {
   private String name;
-  private String yearOfCreation;
 
-  public Movie(String name, String yearOfCreation) {
-    this.name = name;
-    this.yearOfCreation = yearOfCreation;
-  }
+  private String yearOfProduction;
 
   public String getName() {
     return name;
   }
-  public String getYearOfCreation() {
-    return yearOfCreation;
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getYearOfProduction() {
+    return yearOfProduction;
+  }
+
+  public void setYearOfProduction(String yearOfProduction) {
+    this.yearOfProduction = yearOfProduction;
   }
 }

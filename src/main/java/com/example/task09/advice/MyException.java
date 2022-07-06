@@ -1,4 +1,4 @@
-package com.task.advice;
+package com.example.task09.advice;
 
 public class MyException extends RuntimeException{
 
