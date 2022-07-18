@@ -3,8 +3,6 @@ package com.example.task09.controller;
 import com.example.task09.entity.Movie;
 
 public class MovieResponse {
-
-
   private String name;
   private String yearOfProduction;
 

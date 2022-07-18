@@ -2,7 +2,6 @@ package com.example.task09.entity;
 
 public class Movie {
   private String name;
-
   private String yearOfProduction;
 
   public String getName() {

@@ -6,18 +6,16 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Transactional
+
 @Service
 public class MovieServiceImpl implements MovieService {
-
   private final MovieMapper movieMapper;
-
-
+  
   public MovieServiceImpl(MovieMapper movieMapper) {
     this.movieMapper = movieMapper;
   }
-
-  public List<Movie> findMatch(String yearOfProduction) {
-    return movieMapper.findOne(yearOfProduction);
+  @Transactional
+  public List<Movie> findMovieMatching(String yearOfProduction) {
+    return movieMapper.findMovieMatching(yearOfProduction);
   }
 }

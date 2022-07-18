@@ -8,8 +8,6 @@ import org.apache.ibatis.annotations.*;
 @Mapper
 public interface MovieMapper {
     @Select("select * from movie where year_of_production=#{yearOfProduction}")
-    List<Movie> findOne(String yearOfProduction);
-
-
+    List<Movie> findMovieMatching(String yearOfProduction);
   }
 

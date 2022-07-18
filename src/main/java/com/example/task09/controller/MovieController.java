@@ -17,11 +17,10 @@ public class MovieController {
 
   @GetMapping("/movies")
   public List<MovieResponse> getNames(@RequestParam String year) {
-    if (movieService.findMatch(year).stream().map(MovieResponse::new).toList()
-        .isEmpty() ) {
+    if (movieService.findMovieMatching(year).stream().map(MovieResponse::new).toList().isEmpty()) {
       throw new MyException("入力に誤りがあります。年の値として2010～2019を入力してください。");
     }
-    return movieService.findMatch(year).stream().map(MovieResponse::new)
+    return movieService.findMovieMatching(year).stream().map(MovieResponse::new)
         .toList();
   }
 }
